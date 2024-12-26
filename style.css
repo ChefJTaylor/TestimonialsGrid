@@ -1,0 +1,154 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    margin: 0;
+    padding: 10%;
+    background-color: hsl(210, 46%, 95%);
+    font-size: 13px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    
+}
+
+.testimonials-container {
+    display: grid;
+    grid-template: 1fr 1fr/ repeat(4, 1fr);
+    gap: 2em
+
+}
+
+.testimonials-header {
+  display: flex;
+  flex-direction: row;;
+  align-items: center;
+  text-align: left;
+  margin-bottom: -1em;
+  margin-top: -1em;
+}
+
+.biopic {
+    margin-left: 1em;
+    width: 50%;
+    height: 50%;
+    border-radius: 60%;
+   
+}
+
+.testimonial-picture {
+    place-self: center;
+    margin-left: 1.5em;
+}
+
+.subheading {
+  display: flex;
+}
+
+.name {
+    display: flex-start;
+    font-size: .75rem;
+    font-weight: 600;
+    margin-top: 1em;
+    color: hsl(0, 0%, 100%);
+}
+
+.graduate {
+    font-size: .75rem;
+    font-weight: 600;
+    margin-top: -.5em;
+    color: hsl(0, 0%, 100%, 50%);
+}
+
+p {
+  color: hsl(0, 0%, 100%);
+  margin-top: 1em;
+  font-size: 1.25rem;
+  position: relative;
+  z-index: 2;
+}
+
+
+blockquote {
+    color: hsl(0, 0%, 100%, 70%);
+    margin: 0;
+}
+
+.daniel, .jonathan, .jeanette, .patrick, .kira {
+    border-radius: 10px;
+    padding: 2em;
+   
+}
+
+.quotation-marks {
+   position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(-70%, 0%);
+    opacity: .5;
+    z-index: 1;
+}
+
+.daniel {
+  background-color: hsl(263, 55%, 52%);
+  grid-area: 1 / span 2;
+  position: relative 
+ 
+}
+
+.jonathan {
+  background-color: hsl(217, 19%, 35%);
+}
+
+.jeanette {
+  background-color: hsl(0, 0%, 100%);
+  grid-area: 2 / 1;
+
+  .name, p {
+    color: hsl(217, 19%, 35%) !important;
+  }
+
+  .graduate {
+    color: hsl(217, 19%, 35%, 50%) !important;
+  }
+
+  blockquote {
+    color: hsl(217, 19%, 35%, 70%) !important;
+  }
+}
+
+.patrick {
+  background-color: hsl(219, 29%, 14%);
+  grid-area: 2 / span 2;
+}
+
+.kira {
+  background-color: hsl(0, 0%, 100%);
+  grid-area: 1 / 4 / span 2 / span 1;
+
+  .name, p {
+    color: hsl(217, 19%, 35%) !important;
+  }
+
+  .graduate {
+    color: hsl(217, 19%, 35%, 50%) !important;
+  }
+
+  blockquote {
+    color: hsl(217, 19%, 35%, 70%) !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .testimonials-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    padding-top: 2em;
+    padding-bottom: 2em;
+  }
+}
+  
